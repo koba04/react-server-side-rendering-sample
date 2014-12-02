@@ -1,0 +1,23 @@
+{
+  "name": "react-server-side-rendering-sample",
+  "version": "0.1.0",
+  "description": "React.js server-side rendering sample",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react.js"
+  ],
+  "author": "koba04",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^6.3.3",
+    "express": "^4.10.4",
+    "handlebars": "^2.0.0",
+    "node-jsx": "^0.12.4",
+    "react": "^0.12.1",
+    "reactify": "^0.17.1",
+    "watchify": "^2.1.1"
+  }
+}
