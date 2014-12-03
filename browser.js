@@ -1,7 +1,11 @@
 'use strict';
 var React = require('react'),
-    App   = require('./components/app')
+    Router = require('react-router'),
+    routes = require('./routes')()
 ;
 
-var data = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
-React.render(<App data={data} />, document.getElementById("app"));
+Router.run(routes, Router.HistoryLocation, (Handler) => {
+  React.render(<Handler />, document.getElementById("app"));
+});
+
+//var data = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
