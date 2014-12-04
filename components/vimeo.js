@@ -9,7 +9,7 @@ var Vimeo = React.createClass({
   render() {
     return (
       <Grid>
-        <h2>youtube</h2>
+        <h2>vimeo</h2>
         <Row className="show-grid">{this.renderVideos('vimeo')}</Row>
       </Grid>
     );
