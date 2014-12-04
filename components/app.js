@@ -1,22 +1,19 @@
 'use strict';
-var React = require('react');
+var React = require('react'),
+    {ListGroup, ListGroupItem} = require('react-bootstrap'),
+    {Link, RouteHandler} = require('react-router')
+;
 
 var App = React.createClass({
-  getInitialState() {
-    return {
-      message: "loading..."
-    };
-  },
-  componentDidMount() {
-    this.setState({ message: "welcome!" });
-  },
   render() {
-    var list = this.props.data.map(obj => <li key={obj.id}>{obj.id}:{obj.name}</li>);
     return (
       <div>
-        <p>server-side rendering sample</p>
-        <p>{this.state.message}</p>
-        <ul>{list}</ul>
+        <h1><Link to="app">React server-side rendering sample</Link></h1>
+        <ListGroup>
+          <Link to="youtube" key='youtube'><ListGroupItem>youtube</ListGroupItem></Link>
+          <Link to="vimeo" key='vimeo'><ListGroupItem>vimeo</ListGroupItem></Link>
+        </ListGroup>
+        <RouteHandler {...this.props} />
       </div>
     );
   }
