@@ -17,7 +17,7 @@ module.exports = {
   renderVideos(type) {
     return this.props.params.videos[type].map( video => {
       return (
-        <Col xs={6} md={4} key={video.id}>
+        <Col md={6} md={6} key={video.id}>
           <Jumbotron>
             <Video from={type} id={video.id} />
             <p>{video.title}</p>
