@@ -23,7 +23,6 @@ var data = {
     {id: '92687646', title: 'ReactJS by Adam Solove'}
   ]
 };
-require('./initial-data')(data);
 
 require('node-jsx').install({ harmony: true });
 var routes = require('./routes')();
@@ -43,7 +42,7 @@ app.use(function(req, res) {
   Router.run(routes, req.path, function(Handler) {
     res.send(template({
       initialData: JSON.stringify(data),
-      markup: React.renderToString(React.createElement(Handler))
+      markup: React.renderToString(React.createElement(Handler, {params: {videos: data}}))
     }));
   });
 });

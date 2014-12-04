@@ -4,8 +4,9 @@ var React = require('react'),
     routes = require('./routes')()
 ;
 
+var initialData = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));
+
 Router.run(routes, Router.HistoryLocation, (Handler) => {
-  React.render(<Handler />, document.getElementById("app"));
+  React.render(<Handler params={{videos: initialData}} />, document.getElementById("app"));
 });
 
-//var data = JSON.parse(document.getElementById('initial-data').getAttribute('data-json'));

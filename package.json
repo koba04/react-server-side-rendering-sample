@@ -19,6 +19,7 @@
     "react": "^0.12.1",
     "react-bootstrap": "^0.13.0",
     "react-router": "^0.11.4",
+    "react-video": "^1.1.5",
     "reactify": "^0.17.1",
     "watchify": "^2.1.1"
   },

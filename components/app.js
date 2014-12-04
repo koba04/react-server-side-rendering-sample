@@ -13,7 +13,7 @@ var App = React.createClass({
           <Link to="youtube" key='youtube'><ListGroupItem>youtube</ListGroupItem></Link>
           <Link to="vimeo" key='vimeo'><ListGroupItem>vimeo</ListGroupItem></Link>
         </ListGroup>
-        <RouteHandler />
+        <RouteHandler {...this.props} />
       </div>
     );
   }
